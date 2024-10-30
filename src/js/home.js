@@ -1,4 +1,8 @@
 function loadHomePage() {
+
+    const header = document.getElementById('header');
+    header.classList.add('home');
+
     const content = document.getElementById('content');
     content.classList.add('home');
 

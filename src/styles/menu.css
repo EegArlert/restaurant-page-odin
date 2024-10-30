@@ -1,3 +1,105 @@
-body #content.menu {
-    
+:root {
+    --header-info-fonts: 'Cormorant', 'Noto Sans', Times, serif;
+    --menu-description-fonts: 'Mulish', 'Noto Sans', Times, serif;
+    --menu-alternative-fonts: 'Proza Libre', 'Noto Sans', Times, serif;
+    --green-font-color: #395542;
+    --cream-color-button: #edddcd;
+    --white-font-page-color: #ffffff;
 }
+
+header.menu nav button:nth-child(2) {
+    border-bottom: solid 5px;
+} 
+
+body #content.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+body #content.menu h1 {
+    text-align: center;
+    font-family: var(--header-info-fonts);
+    color: var(--green-font-color);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+body #content.menu h2 {
+    background-color: var(--cream-color-button);
+    width: 100%;
+    text-align: center;
+    color: var(--green-font-color)
+}
+
+body #content.menu h4 {
+    font-size: 1.9rem;
+    font-family: var(--header-info-fonts);
+}
+
+body #content.menu h5 {
+    font-family: var(--menu-description-fonts);
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/*Styling Bakery Section Starts  */
+body #content.menu .menu-container{
+    text-align: start;
+    width: 80vw;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.2rem 0 4rem 0;
+}
+
+body #content.menu .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+body #content.menu .cards-container .card {
+    width: 300px;
+    height: 300px;
+    background-color: var(--green-font-color);
+    color: var(--cream-color-button);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 1rem;
+    transition: background-color 0.3s;
+}
+
+body #content.menu .cards-container .card:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+}
+
+body #content.menu .cards-container .card .card-background {
+    font-size: 1.1rem;
+    width: 80%;
+    visibility: hidden;
+    position: relative;
+    top: 120px;
+    transition: top 0.3s, background-color;
+}
+
+body #content.menu .cards-container .card:hover .card-background {
+    font-size: 1.1rem;
+    visibility: visible;
+    top: 30px;
+}
+
+body #content.menu .cards-container .card .card-description {
+    position: relative;
+    top: 20px;
+}
+/*Styling Bakery Section Starts  */
+

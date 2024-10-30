@@ -13,9 +13,14 @@ const buttons = document.querySelectorAll('.nav-button');
 function clearContent() {
     const content = document.getElementById('content');
     content.innerHTML = '';
+    content.classList.remove('menu', 'home', 'about');
+    
+    const header = document.getElementById('header');
+    header.classList.remove('menu', 'home', 'about');
+
 }
 
-loadMenuPage();
+loadHomePage();
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
