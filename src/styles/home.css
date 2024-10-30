@@ -1,5 +1,6 @@
-/* Resetting CSS styling Starts*/
+Resetting CSS styling Starts
 /* 1. Use a more-intuitive box-sizing model */
+
 *,
 *::before,
 *::after {
@@ -30,7 +31,6 @@ svg {
 
 /* 6. Inherit fonts for form controls */
 input,
-button,
 textarea,
 select {
     font: inherit;
@@ -61,6 +61,10 @@ h6 {
     text-wrap: balance;
 }
 
+a {
+    color: var(--cream-color-button);
+}
+
 /*
     9. Create a root stacking context
   */
@@ -86,7 +90,33 @@ h6 {
 body {
     display: flex;
     flex-direction: column;
-    margin: 0 2rem 0 2rem;
+    margin: 3rem 2rem 3rem 2rem;
+    min-width: 600px;
+}
+
+body #content button{
+    background-color: var(--cream-color-button);
+    border: none;
+    width: 250px;
+    height: 60px;
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green-font-color);
+    font-weight: 700;
+    border-radius: 10px;
+    transition: box-shadow 0.1s, color 0.3s, background-color 0.2s;
+    box-shadow: 0 0.1rem 12px 1px var(--cream-color-button);
+}
+
+body #content button:hover {
+    background-color: var(--green-font-color);
+    color: var(--cream-color-button);
+    filter: brightness(110%);
+    box-shadow: 0 0.1rem 0.3rem 0.2rem #aaaaaa;
+    cursor: pointer;
 }
 
 /* Template.html  Header styling */
@@ -149,49 +179,32 @@ body #content {
     background-color: var(--green-font-color);
 }
 
-body #content h2 {
-    font-size: 2rem;
-    margin-top: 2.5rem;
+body #content h2{
+    margin-top: 3rem;
+    font-family: var(--menu-alternative-fonts);
+    font-size: 2.1rem;
 }
 
-body #content .view-menu-btn {
-    background-color: var(--cream-color-button);
-    width: 250px;
-    height: 60px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--green-font-color);
-    font-weight: 700;
-    border-radius: 10px;
-    transition: box-shadow 0.1s, color 0.3s, background-color 0.2s;
-}
-
-body #content .view-menu-btn:hover {
-    background-color: var(--green-font-color);
-    color: var(--cream-color-button);
-    filter: brightness(110%);
-    box-shadow: 0 0.1rem 0.8rem 0.1rem #aaaaaa;
-    cursor: pointer;
-}
-
+/* Image content start */
 body #content .bakery-image-container,
 body #content .coffee-image-container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     margin-bottom: 1rem;
+    padding: 0 1rem 0 1rem;
+    
 }
 
+/* Image bakery container content start */
 body #content .bakery-image-container .content-cards{
+    display: flex;
+    overflow: hidden;
     width: 300px;
     height: 500px;
     box-shadow: 0px 0.1rem 2rem 0.1rem #5b8056;
-}
-
-body #content .bakery-image-container .content-cards .bakery-title,
-body #content .bakery-image-container .content-cards .coffee-title {
-    font-family: var(--header-info-fonts);
 }
 
 body #content .bakery-image-container .content-cards:hover {
@@ -200,17 +213,18 @@ body #content .bakery-image-container .content-cards:hover {
     box-shadow: 0px 0.1rem 2rem 0.1rem #5b8056;
 }
 
-body #content .bakery-image-container .content-cards .info-cards {
-    display: none;
+body #content .content-cards .info-cards {
+    display: flex;
     position: relative;
+    font-size: 1.1rem;
+    padding: 5px;
     top: 500px;
-    transition: top 1s;
 }
 
-body #content .bakery-image-container .content-cards:hover .info-cards {
-    display: block;
-    top: 200px;
-    opacity: 1.5;
+body #content .content-cards:hover .info-cards {
+    display: flex;
+    top: 150px;
+    transition: top 0.3s ease-in-out;
 }
 
 body #content .bakery-image-container .content-cards.first {
@@ -221,10 +235,9 @@ body #content .bakery-image-container .content-cards.first {
 body #content .bakery-image-container .content-cards.first:hover {
     background: url("/assets/pictures/bakery-helenaYankovska.jpg");
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
-
 
 body #content .bakery-image-container .content-cards.second {
     background: url("/assets/pictures/bakery-jeremyYap.jpg");
@@ -234,10 +247,9 @@ body #content .bakery-image-container .content-cards.second {
 body #content .bakery-image-container .content-cards.second:hover {
     background: url("/assets/pictures/bakery-jeremyYap.jpg");
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
-
 
 body #content .bakery-image-container .content-cards.third {
     background: url("/assets/pictures/bakery-helenOreshchenko.jpg");
@@ -247,14 +259,19 @@ body #content .bakery-image-container .content-cards.third {
 body #content .bakery-image-container .content-cards.third:hover {
     background: url("/assets/pictures/bakery-helenOreshchenko.jpg");
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
+/* Image bakery container content ends */
 
+
+/* Image coffee container content start */
 body #content .coffee-image-container .content-cards {
     width: 500px;
     height: 400px;
     box-shadow: 0px 0.1rem 2rem 0.1rem #5b8056;
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
 
 body #content .coffee-image-container .content-cards.first {
@@ -262,14 +279,93 @@ body #content .coffee-image-container .content-cards.first {
     background-size: cover;
 }
 
+body #content .coffee-image-container .content-cards.first:hover {
+    background: url("/assets/pictures/coffee-andrewNeel.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+}
+
 body #content .coffee-image-container .content-cards.second {
     background: url("/assets/pictures/coffee-yanapiSenaud.jpg");
     background-size: cover;
 }
 
+body #content .coffee-image-container .content-cards.second:hover {
+    background: url("/assets/pictures/coffee-yanapiSenaud.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+}
+/* Image coffee container content start */
 
+/* Image content Ends */
+
+/* Form content start */
+body #content .join-newsletter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: var(--menu-alternative-fonts);
+}
+
+body #content .join-newsletter-container form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 3rem;
+}
+
+body #content .join-newsletter-container input {
+    width: 20rem;
+}
+
+body #content .join-newsletter-container .terms-of-use-container input{
+    width: 1rem;
+}
+/* Form content ends */
 /* Template.html #Content Styling Ends*/
 
+/* Footer styling starts */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--cream-color-button);
+    font-size: 1.2rem;
+    height: 120px;
+}
+
+footer a {
+    color: var(--green-font-color);
+}
+
+footer .logo{
+    flex: 1 0 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .footer-info {
+    display: flex;
+    flex: 1 0 60%;
+    justify-content: space-evenly;
+}
+
+footer .footer-info div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+footer .acknowledgemenet {
+    flex: 1 0 20%;
+}
+/* Footer styling ends */
 
 
 
