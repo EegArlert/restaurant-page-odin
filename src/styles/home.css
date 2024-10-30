@@ -84,17 +84,9 @@ a {
     --green-font-color: #395542;
     --cream-color-button: #edddcd;
     --white-font-page-color: #ffffff;
-
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 2rem 3rem 2rem;
-    min-width: 600px;
-}
-
-body #content button{
+body #content.home button{
     background-color: var(--cream-color-button);
     border: none;
     width: 250px;
@@ -111,7 +103,7 @@ body #content button{
     box-shadow: 0 0.1rem 12px 1px var(--cream-color-button);
 }
 
-body #content button:hover {
+body #content.home button:hover {
     background-color: var(--green-font-color);
     color: var(--cream-color-button);
     filter: brightness(110%);
@@ -119,55 +111,8 @@ body #content button:hover {
     cursor: pointer;
 }
 
-/* Template.html  Header styling */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
-    color: var(--green-font-color);
-    font: italic var(--header-info-fonts);
-    margin-bottom: 4rem
-}
-
-header h1 {
-    font-size: 2.4rem;
-}
-
-header h1:hover {
-    cursor: pointer;
-}
-
-header nav {
-    width: 20rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-header nav button {
-    border: none;
-    background: none;
-    color: inherit;
-    font-size: 1.3rem;
-    font-weight: 700;
-    transition: 0.2s;
-}
-
-header nav button:hover {
-    border-bottom: solid;
-    border-width: 5px;
-    cursor: pointer;
-}
-
-header nav button:nth-child(1) {
-    border-bottom: solid 5px;
-} 
-/* Template.html Header Styling */
-
 /* Template.html #Content Styling Starts*/
-body #content {
+body #content.home {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -179,15 +124,15 @@ body #content {
     background-color: var(--green-font-color);
 }
 
-body #content h2{
+body #content.home h2{
     margin-top: 3rem;
     font-family: var(--menu-alternative-fonts);
     font-size: 2.1rem;
 }
 
 /* Image content start */
-body #content .bakery-image-container,
-body #content .coffee-image-container {
+body #content.home .bakery-image-container,
+body #content.home .coffee-image-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -199,7 +144,7 @@ body #content .coffee-image-container {
 }
 
 /* Image bakery container content start */
-body #content .bakery-image-container .content-cards{
+body #content.home .bakery-image-container .content-cards{
     display: flex;
     overflow: hidden;
     width: 300px;
@@ -207,13 +152,13 @@ body #content .bakery-image-container .content-cards{
     box-shadow: 0px 0.1rem 2rem 0.1rem #5b8056;
 }
 
-body #content .bakery-image-container .content-cards:hover {
+body #content.home .bakery-image-container .content-cards:hover {
     width: 300px;
     height: 500px;
     box-shadow: 0px 0.1rem 2rem 0.1rem #5b8056;
 }
 
-body #content .content-cards .info-cards {
+body #content.home .content-cards .info-cards {
     display: flex;
     position: relative;
     font-size: 1.1rem;
@@ -221,42 +166,42 @@ body #content .content-cards .info-cards {
     top: 500px;
 }
 
-body #content .content-cards:hover .info-cards {
+body #content.home .content-cards:hover .info-cards {
     display: flex;
     top: 150px;
     transition: top 0.3s ease-in-out;
 }
 
-body #content .bakery-image-container .content-cards.first {
+body #content.home .bakery-image-container .content-cards.first {
     background: url("/assets/pictures/bakery-helenaYankovska.jpg");
     background-size: cover;
 }
 
-body #content .bakery-image-container .content-cards.first:hover {
+body #content.home .bakery-image-container .content-cards.first:hover {
     background: url("/assets/pictures/bakery-helenaYankovska.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
 
-body #content .bakery-image-container .content-cards.second {
+body #content.home .bakery-image-container .content-cards.second {
     background: url("/assets/pictures/bakery-jeremyYap.jpg");
     background-size: cover; 
 }
 
-body #content .bakery-image-container .content-cards.second:hover {
+body #content.home .bakery-image-container .content-cards.second:hover {
     background: url("/assets/pictures/bakery-jeremyYap.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
 
-body #content .bakery-image-container .content-cards.third {
+body #content.home .bakery-image-container .content-cards.third {
     background: url("/assets/pictures/bakery-helenOreshchenko.jpg");
     background-size: cover;
 }
 
-body #content .bakery-image-container .content-cards.third:hover {
+body #content.home .bakery-image-container .content-cards.third:hover {
     background: url("/assets/pictures/bakery-helenOreshchenko.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
@@ -266,7 +211,7 @@ body #content .bakery-image-container .content-cards.third:hover {
 
 
 /* Image coffee container content start */
-body #content .coffee-image-container .content-cards {
+body #content.home .coffee-image-container .content-cards {
     width: 500px;
     height: 400px;
     box-shadow: 0px 0.1rem 2rem 0.1rem #5b8056;
@@ -274,24 +219,24 @@ body #content .coffee-image-container .content-cards {
     overflow: hidden;
 }
 
-body #content .coffee-image-container .content-cards.first {
+body #content.home .coffee-image-container .content-cards.first {
     background: url("/assets/pictures/coffee-andrewNeel.jpg");
     background-size: cover;
 }
 
-body #content .coffee-image-container .content-cards.first:hover {
+body #content.home .coffee-image-container .content-cards.first:hover {
     background: url("/assets/pictures/coffee-andrewNeel.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
 
-body #content .coffee-image-container .content-cards.second {
+body #content.home .coffee-image-container .content-cards.second {
     background: url("/assets/pictures/coffee-yanapiSenaud.jpg");
     background-size: cover;
 }
 
-body #content .coffee-image-container .content-cards.second:hover {
+body #content.home .coffee-image-container .content-cards.second:hover {
     background: url("/assets/pictures/coffee-yanapiSenaud.jpg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
@@ -302,14 +247,14 @@ body #content .coffee-image-container .content-cards.second:hover {
 /* Image content Ends */
 
 /* Form content start */
-body #content .join-newsletter-container {
+body #content.home .join-newsletter-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
     font-family: var(--menu-alternative-fonts);
 }
 
-body #content .join-newsletter-container form {
+body #content.home .join-newsletter-container form {
     display: flex;
     width: 100%;
     height: 100%;
@@ -320,52 +265,13 @@ body #content .join-newsletter-container form {
     margin-bottom: 3rem;
 }
 
-body #content .join-newsletter-container input {
+body #content.home .join-newsletter-container input {
     width: 20rem;
 }
 
-body #content .join-newsletter-container .terms-of-use-container input{
+body #content.home .join-newsletter-container .terms-of-use-container input{
     width: 1rem;
 }
 /* Form content ends */
 /* Template.html #Content Styling Ends*/
-
-/* Footer styling starts */
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    background-color: var(--cream-color-button);
-    font-size: 1.2rem;
-    height: 120px;
-}
-
-footer a {
-    color: var(--green-font-color);
-}
-
-footer .logo{
-    flex: 1 0 20%;
-    justify-content: center;
-    text-align: center;
-}
-
-footer .footer-info {
-    display: flex;
-    flex: 1 0 60%;
-    justify-content: space-evenly;
-}
-
-footer .footer-info div {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-footer .acknowledgemenet {
-    flex: 1 0 20%;
-}
-/* Footer styling ends */
-
-
 

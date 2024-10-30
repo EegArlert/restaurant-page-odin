@@ -1,0 +1,188 @@
+Resetting CSS styling Starts
+/* 1. Use a more-intuitive box-sizing model */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+a {
+    color: var(--cream-color-button);
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Resetting CSS styling Ends*/
+
+
+/* Styling starts here */
+:root {
+    --header-info-fonts: 'Cormorant', 'Noto Sans', Times, serif;
+    --menu-description-fonts: 'Mulish', 'Noto Sans', Times, serif;
+    --menu-alternative-fonts: 'Proza Libre', 'Noto Sans', Times, serif;
+    --green-font-color: #395542;
+    --cream-color-button: #edddcd;
+    --white-font-page-color: #ffffff;
+
+}
+
+/* Template.html  Header styling */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    color: var(--green-font-color);
+    font: italic var(--header-info-fonts);
+    margin-bottom: 4rem
+}
+
+header h1 {
+    font-size: 2.4rem;
+}
+
+header h1:hover {
+    cursor: pointer;
+}
+
+header nav {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav button {
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+header nav button:hover {
+    border-bottom: solid;
+    border-width: 5px;
+    cursor: pointer;
+}
+
+header nav button:nth-child(1) {
+    border-bottom: solid 5px;
+} 
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 2rem 3rem 2rem;
+    min-width: 600px;
+}
+/* Template.html Header Styling */
+
+
+/* Footer styling starts */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--cream-color-button);
+    font-size: 1.2rem;
+    height: 120px;
+}
+
+footer .logo,
+footer .footer-info .nav-footer-column,
+footer .acknowledgement {
+    font-size: 1.5rem;
+}
+
+footer a {
+    color: var(--green-font-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+footer .logo{
+    flex: 1 0 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .footer-info {
+    display: flex;
+    flex: 1 0 60%;
+    justify-content: space-evenly;
+}
+
+footer .footer-info div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+footer .acknowledgement {
+    flex: 1 0 20%;
+}
+/* Footer styling ends */

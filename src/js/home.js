@@ -1,5 +1,6 @@
 function loadHomePage() {
     const content = document.getElementById('content');
+    content.classList.add('home');
 
     // Header description
     const description = document.createElement('h2');
@@ -128,6 +129,12 @@ function loadHomePage() {
     termsContainer.appendChild(termsLabel);
 
     form.appendChild(termsContainer);
+
+    const submitButton = document.createElement('button');
+    submitButton.classList.add('submit-button');
+    submitButton.type = 'submit';
+    submitButton.textContent = "SUBSCRIBE";
+    form.appendChild(submitButton);
 
     joinNewsletterContainer.appendChild(form);
 }

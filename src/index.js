@@ -1,6 +1,7 @@
 import loadHomePage from './js/home';
 import loadAboutPage from './js/about';
 import loadMenuPage from './js/menu';
+import './styles/index.css'
 import './styles/home.css';
 import './styles/about.css';
 import './styles/menu.css';
@@ -14,7 +15,7 @@ function clearContent() {
     content.innerHTML = '';
 }
 
-loadHomePage();
+loadMenuPage();
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
