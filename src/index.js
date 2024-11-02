@@ -10,7 +10,7 @@ import './styles/menu.css';
 
 const buttons = document.querySelectorAll('.nav-button');
 
-function clearContent() {
+export function clearContent() {
     const content = document.getElementById('content');
     content.innerHTML = '';
     content.classList.remove('menu', 'home', 'about');
@@ -20,7 +20,7 @@ function clearContent() {
 
 }
 
-loadMenuPage();
+loadHomePage();
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {

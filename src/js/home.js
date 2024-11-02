@@ -1,3 +1,12 @@
+import bakeryHome1 from '../assets/pictures/bakery-helenaYankovska.jpg'
+import bakeryHome2 from '../assets/pictures/bakery-jeremyYap.jpg'
+import bakeryHome3 from '../assets/pictures/bakery-helenOreshchenko.jpg'
+import coffeeHome1 from '../assets/pictures/coffee-andrewNeel.jpg'
+import coffeeHome2 from '../assets/pictures/coffee-yanapiSenaud.jpg'
+import loadHome from './menu'
+import { clearContent } from '../index'
+
+
 function loadHomePage() {
 
     const header = document.getElementById('header');
@@ -16,6 +25,10 @@ function loadHomePage() {
     const viewMenuButton = document.createElement('button');
     viewMenuButton.classList.add('view-menu-btn');
     viewMenuButton.textContent = 'VIEW THE MENU';
+    viewMenuButton.addEventListener('click', () => {
+        clearContent();
+        loadHome();
+    })
     content.appendChild(viewMenuButton);
 
     // "Bakery title" H2
@@ -39,9 +52,21 @@ function loadHomePage() {
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, at eius atque eum voluptatum ut eveniet nemo aliquam accusantium expedita cupiditate non consequatur molestiae veritatis eligendi sunt perspiciatis hic obcaecati.'
     ];
 
+    const bakeryPictures = [
+        bakeryHome1,
+        bakeryHome2,
+        bakeryHome3,
+    ];
+
+    const coffeePictures = [
+        coffeeHome1,
+        coffeeHome2,
+    ]
+
     bakeryTexts.forEach((text, index) => {
         const contentCard = document.createElement('div');
         contentCard.classList.add('content-cards', index === 0 ? 'first' : index === 1 ? 'second' : 'third');
+        contentCard.style.backgroundImage = `url(${bakeryPictures[index]})`;
 
         const infoCards = document.createElement('div');
         infoCards.classList.add('info-cards');
@@ -75,6 +100,7 @@ function loadHomePage() {
     coffeeTexts.forEach((text, index) => {
         const contentCards = document.createElement('div');
         contentCards.classList.add('content-cards', index === 0 ? 'first' : 'second');
+        contentCards.style.backgroundImage = `url(${coffeePictures[index]})`
 
         const infoCards = document.createElement('div');
         infoCards.classList.add('info-cards');
@@ -125,6 +151,7 @@ function loadHomePage() {
     termsCheckbox.type = 'checkbox';
     termsCheckbox.name = 'terms-of-use';
     termsCheckbox.id = 'terms-of-use';
+    termsCheckbox.required = true;
     termsContainer.appendChild(termsCheckbox);
 
     const termsLabel = document.createElement('label');

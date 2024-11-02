@@ -177,7 +177,6 @@ body #content.home .content-cards:hover .info-cards {
 }
 
 body #content.home .bakery-image-container .content-cards.first {
-    /* background: url("/assets/pictures/bakery-helenaYankovska.jpg"); */
     background-size: cover;
 }
 
@@ -275,6 +274,7 @@ body #content.home .join-newsletter-container input {
 
 body #content.home .join-newsletter-container .terms-of-use-container input{
     width: 1rem;
+    margin-right: 10px;
 }
 /* Form content ends */
 /* Template.html #Content Styling Ends*/
