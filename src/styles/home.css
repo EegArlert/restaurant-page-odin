@@ -177,36 +177,36 @@ body #content.home .content-cards:hover .info-cards {
 }
 
 body #content.home .bakery-image-container .content-cards.first {
-    background: url("/assets/pictures/bakery-helenaYankovska.jpg");
+    /* background: url("/assets/pictures/bakery-helenaYankovska.jpg"); */
     background-size: cover;
 }
 
 body #content.home .bakery-image-container .content-cards.first:hover {
-    background: url("/assets/pictures/bakery-helenaYankovska.jpg");
+    /* background: url("../../assets/pictures/bakery-helenaYankovska.jpg"); */
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
 
 body #content.home .bakery-image-container .content-cards.second {
-    background: url("/assets/pictures/bakery-jeremyYap.jpg");
+    /* background: url("/assets/pictures/bakery-jeremyYap.jpg"); */
     background-size: cover; 
 }
 
 body #content.home .bakery-image-container .content-cards.second:hover {
-    background: url("/assets/pictures/bakery-jeremyYap.jpg");
+    /* background: url("../../assets/pictures/bakery-jeremyYap.jpg"); */
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
 
 body #content.home .bakery-image-container .content-cards.third {
-    background: url("/assets/pictures/bakery-helenOreshchenko.jpg");
+    /* background: url("/assets/pictures/bakery-helenOreshchenko.jpg"); */
     background-size: cover;
 }
 
 body #content.home .bakery-image-container .content-cards.third:hover {
-    background: url("/assets/pictures/bakery-helenOreshchenko.jpg");
+    /* background: url("/assets/pictures/bakery-helenOreshchenko.jpg"); */
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
@@ -224,24 +224,24 @@ body #content.home .coffee-image-container .content-cards {
 }
 
 body #content.home .coffee-image-container .content-cards.first {
-    background: url("/assets/pictures/coffee-andrewNeel.jpg");
+    /* background: url("/assets/pictures/coffee-andrewNeel.jpg"); */
     background-size: cover;
 }
 
 body #content.home .coffee-image-container .content-cards.first:hover {
-    background: url("/assets/pictures/coffee-andrewNeel.jpg");
+    /* background: url("/assets/pictures/coffee-andrewNeel.jpg"); */
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;
 }
 
 body #content.home .coffee-image-container .content-cards.second {
-    background: url("/assets/pictures/coffee-yanapiSenaud.jpg");
+    /* background: url("/assets/pictures/coffee-yanapiSenaud.jpg"); */
     background-size: cover;
 }
 
 body #content.home .coffee-image-container .content-cards.second:hover {
-    background: url("/assets/pictures/coffee-yanapiSenaud.jpg");
+    /* background: url("/assets/pictures/coffee-yanapiSenaud.jpg"); */
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: darken;

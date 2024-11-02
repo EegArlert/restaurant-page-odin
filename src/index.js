@@ -20,7 +20,7 @@ function clearContent() {
 
 }
 
-loadHomePage();
+loadMenuPage();
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
