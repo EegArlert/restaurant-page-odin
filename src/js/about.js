@@ -1,4 +1,9 @@
 function loadAboutPage() {
+
+    const header = document.getElementById('header');
+    header.classList.add('about');
+
+
     const content = document.getElementById('content');
     content.classList.add('about');
 

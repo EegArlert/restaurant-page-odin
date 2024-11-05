@@ -7,6 +7,10 @@
     --white-font-page-color: #ffffff;
 }
 
+header.about nav button:nth-child(3) {
+    border-bottom: solid 5px;
+} 
+
 body #content.about {
     display: flex;
     flex-direction: column;

@@ -3,8 +3,8 @@ import loadAboutPage from './js/about';
 import loadMenuPage from './js/menu';
 import './styles/index.css'
 import './styles/home.css';
-import './styles/about.css';
 import './styles/menu.css';
+import './styles/about.css';
 
 
 
