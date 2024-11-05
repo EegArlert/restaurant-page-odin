@@ -1,0 +1,28 @@
+:root {
+    --header-info-fonts: 'Cormorant', 'Noto Sans', Times, serif;
+    --menu-description-fonts: 'Mulish', 'Noto Sans', Times, serif;
+    --menu-alternative-fonts: 'Proza Libre', 'Noto Sans', Times, serif;
+    --green-font-color: #395542;
+    --cream-color-button: #edddcd;
+    --white-font-page-color: #ffffff;
+}
+
+body #content.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background-color: var(--green-font-color);
+    color: var(--cream-color-button);
+    font-size: 1.2rem;
+    font-family: var(--menu-description-fonts);
+    padding: 3rem;
+}
+
+body #content.about h1 {
+    margin-bottom: 2rem;
+}
+
+body #content.about p {
+    width: 40vw;
+}

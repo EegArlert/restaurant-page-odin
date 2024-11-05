@@ -20,7 +20,7 @@ export function clearContent() {
 
 }
 
-loadHomePage();
+loadAboutPage();
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {

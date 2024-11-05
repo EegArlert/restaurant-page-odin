@@ -1,5 +1,5 @@
 import { bakeryMenu } from './bakeryData'
-import { beverageMenu } from './beverageData'
+import  { beverageMenu }  from './beverageData'
 
 function loadMenuPage() {
     const contentMenu = document.getElementById('content');
